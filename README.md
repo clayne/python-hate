@@ -312,7 +312,6 @@ When you call `super().__init__` in your class constructor:
 class B(A):
   def __init__(self):
     super(B, self).__init__()
-
 ```
 it will NOT necessarily call constructor of superclass (`A` in this case).
 
@@ -325,7 +324,7 @@ Let's look at a simple example:
 #   /    \
 #  A      B
 #  |      |
-#   C      D
+#  C      D
 #   \    /
 #      E
 
