@@ -426,6 +426,22 @@ I'll let the reader decide how more readable and efficient this makes your code.
 
 See [Python's Super is nifty, but you can't use it](https://fuhm.net/super-harmful/) for an in-depth discussion.
 
+## Compound statement inconsistencies
+
+Compound statements may be useful
+```
+def cd(dir):
+  import os; os.chdir(dir)
+```
+unless when they do not work
+```
+>>> x = 0; for y in range(5): print(y)
+  File "<stdin>", line 1
+    x = 0; for y in range(5): print(y)
+           ^
+SyntaxError: invalid syntax
+```
+
 # Standard Libraries
 
 ## List generators fail check for emptiness
